@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/write.css">
+</head>
+<body>
+    <div id="back">
+        <img src="../images/yelhead.png" alt=""> 
+        <div id="container">
+            <h1>Please Update your thoughts here :</h1>
+            <form method="post" action=<%="/updatedpost/"+post._id %>>
+                <textarea name="post" placeholder="Your Thoughts"><%= post.post %></textarea>
+            </form>
+            <img id=submit src="../images/btn.png" alt="">      
+        </div>
+    </div>
+    <script>
+        document.querySelector('#submit').addEventListener('click',function(){
+            document.querySelector('form').submit();
+        })
+    </script>
+</body>
+</html>
